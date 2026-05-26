@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شوشتى - عيدي الأول معك ❤️</title>
+    <!-- Google Fonts for ultra-modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="modern-theme">
+
+
+    <!-- Modern Neon Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="neon-sheep-container">
+                <!-- Sleek minimalist neon outline sheep SVG -->
+                <svg viewBox="0 0 100 100" class="neon-sheep-svg">
+                    <circle cx="50" cy="50" r="28" class="neon-wool-path" />
+                    <!-- Minimal face -->
+                    <ellipse cx="50" cy="48" rx="12" ry="14" class="neon-head-path" />
+                    <circle cx="46" cy="46" r="1.5" fill="#ff007f" />
+                    <circle cx="54" cy="46" r="1.5" fill="#ff007f" />
+                    <!-- Horns -->
+                    <path d="M 40,36 Q 34,30 40,24" fill="none" stroke="#d4af37" stroke-width="2.5" class="neon-gold-path" />
+                    <path d="M 60,36 Q 66,30 60,24" fill="none" stroke="#d4af37" stroke-width="2.5" class="neon-gold-path" />
+                    <!-- Cute heart glow -->
+                    <path d="M 50,70 C 48,68 44,68 44,72 C 44,76 50,80 50,80 C 50,80 56,76 56,72 C 56,68 52,68 50,70 Z" class="neon-heart-path" />
+                </svg>
+            </div>
+            <h2 class="preloader-title">بنجّهزلك مفاجأة العيد يا شوشتى... ✨</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Particle Canvas (Neon Sparks, Hearts, Sheep Outlines) -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Spotify-Style Audio Widget -->
+    <div class="spotify-widget" id="spotify-player-widget">
+        <div class="spotify-album-art" id="spotify-album-container">
+            <img src="assets/images/video-poster.jpg" alt="Album Art" id="spotify-album-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231a0a2a\'/><circle cx=\'50\' cy=\'50\' r=\'20\' fill=\'%23ff007f\'/></svg>'">
+            <div class="music-vinyl-hole"></div>
+        </div>
+        <div class="spotify-info">
+            <div class="song-title">بنسى نفسي 🎵</div>
+            <div class="song-artist">حماده مجرشي</div>
+            <div class="spotify-progress-wrapper">
+                <span class="time-display" id="track-time-elapsed">0:00</span>
+                <div class="spotify-progress-bar" id="track-progress-bar">
+                    <div class="spotify-progress-fill" id="track-progress-fill"></div>
+                </div>
+                <span class="time-display" id="track-time-duration">3:24</span>
+            </div>
+        </div>
+        <div class="spotify-controls">
+            <button class="control-btn" id="spotify-prev" aria-label="السابق">⏮</button>
+            <button class="control-btn play-btn" id="spotify-play-pause" aria-label="تشغيل">▶</button>
+            <button class="control-btn" id="spotify-next" aria-label="التالي">⏭</button>
+        </div>
+        <!-- Floating prompt to click music player -->
+        <div class="spotify-tip-bubble">اضغطي هنا لتشغيل الأغنية 💖</div>
+    </div>
+    <audio id="bg-audio" loop autoplay src="assets/audio/bansa-nafsy.m4a"></audio>
+
+
+    <!-- Main Scroll Container -->
+    <main class="main-wrapper">
+
+        <!-- HERO DASHBOARD SECTION -->
+        <section class="hero-section modern-card">
+            <div class="hero-glow-back"></div>
+            
+            <div class="neon-crescent-wrapper">
+                <span class="neon-crescent">🌙</span>
+                <span class="neon-stars-decoration">✨ 🐑 ✨</span>
+            </div>
+
+            <div class="hero-header-card">
+                <div class="neon-badge">أول عيد أضحى معاً 🥂</div>
+                
+                <!-- Added new images at the beginning -->
+                <div class="hero-images-container" style="display: flex; gap: 15px; justify-content: center; margin-bottom: 25px;">
+                    <img src="assets/images/FB_IMG_1779732323208.jpg" alt="صورة 1" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 3px solid var(--neon-pink); box-shadow: 0 0 20px rgba(255,0,127,0.4);">
+                    <img src="assets/images/FB_IMG_1779184020099.jpg" alt="صورة 2" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 3px solid var(--neon-purple); box-shadow: 0 0 20px rgba(139,0,255,0.4);">
+                </div>
+
+                <h1 class="modern-glow-title">كل سنة وأنتِ دنيتي يا شوشتى ❤️</h1>
+                <p class="subtitle">بداية حكايتنا اللى خلت لكل يوم طعم جديد، وأول عيد أضحى نقضيه وإحنا حبايب وسوا.</p>
+                
+                <!-- Special Video Section -->
+                <div class="hero-video-card" style="margin-top: 40px; margin-bottom: 20px; text-align: center; background: rgba(20, 10, 30, 0.4); padding: 25px 15px; border-radius: 20px; border: 1px solid rgba(255,0,127,0.2); box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
+                    <h2 style="font-family: 'Aref Ruqaa', serif; color: #ff66b2; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700; line-height: 1.5; text-shadow: 0 2px 10px rgba(255,0,127,0.4);">
+                        " ثُمّ إنكَ رَفيقي الحَنون<br>والرَفيقُ المُفَضّل لِقَلبي "
+                    </h2>
+                    <video controls style="width: 100%; max-width: 320px; border-radius: 15px; border: 2px solid var(--neon-purple); box-shadow: 0 10px 30px rgba(139,0,255,0.4); background: #000;">
+                        <source src="assets/videos/aya-video.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Dashboard Style Counters Grid -->
+            <div class="counters-grid">
+                <!-- Counter Card 1 -->
+                <div class="counter-card glass-panel" id="counter-talk">
+                    <div class="card-icon">💬</div>
+                    <h3>أول كلام بيننا</h3>
+                    <p class="counter-date">15 نوفمبر 2025</p>
+                    <div class="counter-timer">
+                        <div class="time-block"><span class="days outfit-num">00</span><label>يوم</label></div>
+                        <div class="time-block"><span class="hours outfit-num">00</span><label>ساعة</label></div>
+                        <div class="time-block"><span class="minutes outfit-num">00</span><label>دقيقة</label></div>
+                        <div class="time-block"><span class="seconds outfit-num">00</span><label>ثانية</label></div>
+                    </div>
+                </div>
+
+                <!-- Counter Card 2 (Love Confession) -->
+                <div class="counter-card glass-panel special-glow" id="counter-love">
+                    <div class="card-icon pulsing-heart">💖</div>
+                    <h3>أول يوم بقينا حبايب</h3>
+                    <p class="counter-date">20 مارس 2026</p>
+                    <div class="counter-timer">
+                        <div class="time-block"><span class="days outfit-num">00</span><label>يوم</label></div>
+                        <div class="time-block"><span class="hours outfit-num">00</span><label>ساعة</label></div>
+                        <div class="time-block"><span class="minutes outfit-num">00</span><label>دقيقة</label></div>
+                        <div class="time-block"><span class="seconds outfit-num">00</span><label>ثانية</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#gift-section" class="scroll-down-btn">
+                <span>انزلي لفتح كبسولة العيد</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+        </section>
+
+
+        <!-- JOY METER SECTION -->
+        <section class="joy-meter-section modern-card">
+            <div class="glass-panel" style="text-align: center; padding: 40px 20px;">
+                <h2 class="section-title" style="margin-bottom: 10px;">مقياس السعادة 🌡️</h2>
+                <p style="color: var(--text-glass); margin-bottom: 30px;">يا ترى شوشتى مبسوطة بالعيد معايا بنسبة كام؟ اسحبي المؤشر للآخر!</p>
+                
+                <div class="joy-meter-container" style="max-width: 500px; margin: 0 auto;">
+                    <span id="joy-emoji" style="font-size: 4rem; display: block; margin-bottom: 25px; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">😐</span>
+                    <input type="range" id="joy-slider" min="0" max="100" value="0" class="custom-slider" dir="rtl">
+                    <p id="joy-text" style="font-size: 1.4rem; font-weight: bold; color: var(--text-white); margin-top: 25px; transition: color 0.3s;">لسه معملتيش حاجة..</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCRATCH CARD SECTION -->
+        <section class="scratch-card-section modern-card">
+            <div class="glass-panel" style="text-align: center; padding: 40px 20px;">
+                <h2 class="section-title">كارت خربشة العيدية 🎟️</h2>
+                <p style="color: var(--text-glass); margin-bottom: 25px;">امسحي الكارت بصباعك عشان تكتشفي الهدية المستخبية تحت!</p>
+                
+                <div class="scratch-card-container" id="scratch-card-container">
+                    <div id="scratch-secret-message">اضغطي هنا لفتح الهدية! 🎁</div>
+                    <canvas id="scratch-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIGITAL LOVE CAPSULE SECTION -->
+        <section id="gift-section" class="gift-section modern-card">
+            <div class="section-decor-glow"></div>
+            <h2 class="section-title">كبسولة العيد التفاعلية 🔮</h2>
+            <p class="section-intro">اضغطي على الكبسولة الزجاجية المضيئة لتحرير رسالة العيد المخصصة لقلبك</p>
+
+            <!-- Sleek Glass Love Capsule -->
+            <div class="love-capsule-wrapper" id="love-capsule">
+                <div class="capsule-glow-ring"></div>
+                <div class="capsule-glass">
+                    <div class="capsule-core">
+                        <div class="core-heart">💖</div>
+                    </div>
+                    <div class="glass-reflection"></div>
+                </div>
+                <div class="capsule-base">
+                    <div class="base-light"></div>
+                </div>
+            </div>
+
+            <!-- Neon Envelope structure (Becomes visible when capsule is opened) -->
+            <div class="envelope-wrapper hidden" id="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="flap front"></div>
+                    <div class="pocket front"></div>
+                    <div class="letter">
+                        <div class="letter-content">
+                            <h4 class="letter-title">حبيبتي ونور عيني شوشتى،</h4>
+                            <img src="assets/images/Gemini_Generated_Image_kalj51kalj51kalj.png" alt="عيد سعيد" style="width: 100%; border-radius: 10px; margin: 10px 0; border: 2px solid var(--neon-pink); box-shadow: 0 0 15px rgba(255,0,127,0.2);">
+                            <p class="letter-text" style="font-size: 0.95rem;">
+                                كل سنة وأنتِ طيبة وبخير يا قلبي. العيد معاكي مش مجرد يوم، العيد هو وجودك في دنيتي. ربنا يخليكي ليا وميحرمنيش من ضحكتك.
+                            </p>
+                            <p class="letter-signature">حبيبك للأبد ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="envelope-hint">اضغطي على المظروف لفتحه وقراءة الرسالة 💌</p>
+            </div>
+        </section>
+
+
+        <!-- TELEGRAM-STYLE CHAT SIMULATOR SECTION -->
+        <section class="chat-section modern-card">
+            <h2 class="section-title">محادثات لا تُمحى من قلبي 📱</h2>
+            <p class="section-intro">لقطات من الشات والرسائل التي تصنع يومي دائماً</p>
+
+            <!-- Real Chat Screenshots Container -->
+            <div class="real-chats-container" style="display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%;">
+                
+                <div class="chat-image-wrapper" style="width: 100%; max-width: 400px; border-radius: 20px; overflow: hidden; border: 2px solid rgba(255, 0, 127, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <img src="assets/images/محادثه1.png" alt="لقطة شات 1" style="width: 100%; display: block; border-radius: 20px;" onclick="openLightbox(this)" class="real-photo">
+                </div>
+
+                <div class="chat-image-wrapper" style="width: 100%; max-width: 400px; border-radius: 20px; overflow: hidden; border: 2px solid rgba(139, 0, 255, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <img src="assets/images/محادثه2.png" alt="لقطة شات 2" style="width: 100%; display: block; border-radius: 20px;" onclick="openLightbox(this)" class="real-photo">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TIMELINE SECTION -->
+        <section class="timeline-section modern-card">
+            <h2 class="section-title">خط محطاتنا التاريخية 🗓️</h2>
+            <div class="timeline-container">
+                <!-- Node 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">💬</div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">15 نوفمبر 2025</span>
+                        <h3>أول كلمة بيننا</h3>
+                        <p>بداية الشرارة الأولى وحكاية حب لم نكن نتخيل جمالها. أول تواصل وأول دقة قلب حقيقية.</p>
+                    </div>
+                </div>
+
+                <!-- Node 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">🌙</div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">رمضان 2026</span>
+                        <h3>أول رمضان معاً</h3>
+                        <p>أول شهر كريم يجمعنا، دعواتنا المشتركة، وصوتك الذي كان يزين كل أيام وليالي رمضان.</p>
+                    </div>
+                </div>
+
+                <!-- Node 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">💖</div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">20 مارس 2026</span>
+                        <h3>بقينا حبايب (الاعتراف)</h3>
+                        <p>اليوم الذي اعترفنا فيه بالحب ورسمنا عهد الحب معاً، ليصبح كل منا عالم الآخر.</p>
+                    </div>
+                </div>
+
+                <!-- Node 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎉</div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">عيد الفطر 2026</span>
+                        <h3>أول عيد فطر معاً</h3>
+                        <p>أول فرحة عيد نعيشها وإحنا سوا. إنتى العيد والعيدية ورفيقة روحي ودربي، وربنا يجمعني بيكي على خير يارب.</p>
+                    </div>
+                </div>
+
+                <!-- Node 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">🐑</div>
+                    <div class="timeline-content glass-panel special-glow">
+                        <span class="timeline-date">27 مايو 2026</span>
+                        <h3>أول عيد أضحى معاً</h3>
+                        <p>عيدي اليوم هو وجودك معي. أول عيد يجمعنا بضحكاته، حكاياته، وخروف العيد الترفيهي!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- LOVE PUZZLE SECTION -->
+        <section class="puzzle-section modern-card">
+            <h2 class="section-title">بازل الحب 🧩</h2>
+            <p class="section-intro">اضغطي على أي قطعتين عشان تبدليهم وتجمعي صورتنا الحلوة!</p>
+            <div class="glass-panel" style="padding: 20px; text-align: center;">
+                <div class="puzzle-container" id="puzzle-container">
+                    <!-- 9 pieces injected by JS -->
+                </div>
+                <p id="puzzle-success" class="hidden" style="color: var(--neon-pink); font-size: 1.5rem; font-weight: bold; text-align: center; margin-top: 25px; text-shadow: 0 0 15px var(--neon-pink); animation: heartPulse 1s infinite;">زي ما كملتي الصورة.. إنتي كملتي حياتي 💖</p>
+            </div>
+        </section>
+
+        <!-- LOVE COMPASS SECTION -->
+        <section class="compass-section modern-card">
+            <h2 class="section-title">بوصلة الحب 🧭</h2>
+            <p class="section-intro">اضغطي على البوصلة وشوفي قلبي دايماً بيشاور فين!</p>
+            <div class="glass-panel" style="padding: 30px; text-align: center; position: relative;">
+                <div id="love-compass" class="compass-wrapper">
+                    <div class="compass-body"></div>
+                    <div class="compass-needle" id="compass-needle"></div>
+                    <div class="compass-center">💖</div>
+                </div>
+                <p id="compass-message" class="hidden" style="color: var(--neon-pink); font-size: 1.4rem; font-weight: bold; margin-top: 25px; text-shadow: 0 0 10px var(--neon-purple); animation: fadeIn 1s forwards;">مهما لفيت وبُعدت.. اتجاهي ومكاني دايماً ليكي 💘</p>
+            </div>
+        </section>
+
+        <!-- MEDIA & VIDEO GALLERY SECTION -->
+        <section class="gallery-section modern-card">
+            <h2 class="section-title">معرض اللحظات الحية 🎬</h2>
+            <p class="section-intro">ألبوم الصور والفيديوهات المصنوعة بحب خصيصاً لها</p>
+
+            <div class="media-container">
+                <!-- Video Player Card -->
+                <div class="video-card glass-panel">
+                    <h3>مشهد فيديو العيد لشوشتى 🎥</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="assets/images/video-poster.jpg" id="custom-video">
+                            <source src="assets/videos/video-project.mp4" type="video/mp4">
+                            المتصفح لا يدعم تشغيل الفيديو.
+                        </video>
+                        <!-- Video Placeholder -->
+                        <div class="video-placeholder" id="video-placeholder">
+                            <div class="sheep-anim">🐑💫</div>
+                            <h4>الفيديو الخاص بك سيعرض هنا!</h4>
+                            <p>ضعه في مسار `assets/videos/video-project.mp4` ليعمل فوراً.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos Grid -->
+                <div class="photos-grid">
+                    <!-- Photo 1 (Existing) -->
+                    <div class="photo-card glass-panel" onclick="openLightbox(this)">
+                        <img src="assets/images/FB_IMG_1779184020099.jpg" alt="صورتنا الحلوة 1" class="real-photo" style="display: block;">
+                    </div>
+                    <!-- Photo 2 (Existing) -->
+                    <div class="photo-card glass-panel" onclick="openLightbox(this)">
+                        <img src="assets/images/FB_IMG_1779732323208.jpg" alt="صورتنا الحلوة 2" class="real-photo" style="display: block;">
+                    </div>
+                    <!-- Photo 3 (AI Generated 1) -->
+                    <div class="photo-card glass-panel" onclick="openLightbox(this)">
+                        <img src="assets/images/eid_love_1.png" alt="عيد وحب" class="real-photo" style="display: block;">
+                    </div>
+                    <!-- Photo 4 (AI Generated 2) -->
+                    <div class="photo-card glass-panel" onclick="openLightbox(this)">
+                        <img src="assets/images/eid_love_2.png" alt="عيد وحب" class="real-photo" style="display: block;">
+                    </div>
+                    <!-- Photo 5 (AI Generated 3) -->
+                    <div class="photo-card glass-panel" onclick="openLightbox(this)">
+                        <img src="assets/images/eid_love_3.png" alt="عيد وحب" class="real-photo" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SURPRISE VIDEO BUTTON SECTION -->
+        <section class="surprise-section modern-card">
+            <div class="glass-panel" style="text-align: center; padding: 40px 20px;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--neon-pink);">تهنئة العيد الخاصة جداً 🎁</h3>
+                <p style="color: var(--text-glass); margin-bottom: 25px;">مفاجأة صغيرة بانتظارك.. اضغطي على الزر لمشاهدتها!</p>
+                <button class="baa-btn" id="surprise-video-btn" style="font-size: 1.2rem; padding: 15px 40px;">افتحي الهدية 🎀</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox Modal for Photo Viewing -->
+    <div id="lightbox" class="lightbox hidden" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="صورة مكبرة">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Unskippable Surprise Video Modal -->
+    <div id="unskippable-video-modal" class="lightbox hidden" style="z-index: 99999; background: rgba(0,0,0,0.98); backdrop-filter: blur(15px); display: flex; justify-content: center; align-items: center;">
+        <video id="surprise-video" style="max-width: 95vw; max-height: 90vh; border-radius: 20px; box-shadow: 0 0 50px rgba(255, 0, 127, 0.5); border: 2px solid var(--neon-pink);" playsinline>
+            <source src="assets/videos/saja-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Yusef Scratch Card Video Modal -->
+    <div id="yusef-video-modal" class="lightbox hidden" style="z-index: 99999; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <span class="close-lightbox" id="close-yusef-modal" style="position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: white; cursor: pointer;">&times;</span>
+        <video id="yusef-video" style="max-width: 95vw; max-height: 85vh; border-radius: 20px; box-shadow: 0 0 50px rgba(139, 0, 255, 0.5); border: 2px solid var(--neon-purple);" controls playsinline>
+            <source src="assets/videos/yusef-video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- Audio Visualizer (Fixed at bottom) -->
+    <div id="audio-visualizer" class="audio-visualizer hidden">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+
+    <!-- Catch The Sheep Game -->
+    <div id="catch-sheep" class="catch-sheep" style="position: fixed; top: -100px; left: -100px; font-size: 3rem; z-index: 9999; cursor: pointer; user-select: none; transition: top 0.6s, left 0.6s; filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));">🐑</div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
